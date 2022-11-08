@@ -30,12 +30,13 @@ body {
 #menu {
     height: 50% ;
     text-align: center;
+    padding-top: 90px;
 }
 .botaoMenu {
     width: 110px;
     height: 100px;
+    margin: 5px;
     text-align: center;
-    margin-top: 90px;
     font-weight: bold;
     font-size: large;
     background-color: rgb(255, 255, 255);
@@ -58,10 +59,48 @@ body {
     display: none;
     padding: 10px;
     margin: 0 auto;
-    margin-top: 20px;
     border-radius: 10px;
     outline: none;
+    position: relative;
+    top: -8em;
 }
 #input2 {
+    display: none; 
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+    outline: none;
+    position: relative;
+    top: -8em;
+}
+#resultButt {
+    width: 100%;
+    height: 40px;
+    border-radius: 2em;
+    border: 1px solid rgb(0, 0, 0);
+    background-image: linear-gradient(to right, rgb(255, 0, 191), rgb(25, 0, 255));
     display: none;
+    top: 100px;
+    position: relative;
+    top: 75px;
+}
+#resultButt:hover {
+    background-image: linear-gradient(to right, rgb(241, 36, 190), rgb(88, 70, 255));
+}
+#result {
+    background-color: white;
+    color: black;
+    top: 175px;
+    height: 5em;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    position: relative;
+    top: 4.5em;
+    
+}
+#resultText {
+    margin-bottom: 0 auto;
+    margin-top: 0 auto;
 }
