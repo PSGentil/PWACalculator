@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 body {
-    font-family: sans-serif;
+    font-family: 'Muli', sans-serif;
     background-image: url(https://orig15.deviantart.net/2010/f/2015/144/c/2/c21d91dcb11ee16729ec892d03f7b855-d8un0f2.jpg);
 }
 #container {
@@ -11,7 +12,6 @@ body {
     margin: 0 auto;
     margin-top: 10em;
     color: white;
-
 }
 #container h1 {
     text-align: center;
@@ -19,13 +19,14 @@ body {
     width: max-content;
     margin: 0 auto;
     transition: .2s;
-   
+    
 }
 #container h1:hover {
     color: black;
     text-shadow: 0 0 1em 0 rgb(7, 88, 0);
     font-size: 300%;
     transition: 0.5s;
+    cursor: pointer;
 }
 #menu {
     height: 50% ;
@@ -42,20 +43,28 @@ body {
     background-color: rgb(255, 255, 255);
 }
 .botaoMenu:hover {
-    background-color: black;
+    background-color: rgb(49, 0, 65);
     color: white;
-    border: 0.5px solid rgb(122, 247, 132);
-    border-radius: 10px;
-    box-shadow: 0 0 2em rgb(1, 27, 0);
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow:
+    rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px,
+    rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px,
+    rgba(240, 46, 170, 0.05) -25px 25px;
+    /*box-shadow: 0 0 2em rgb(0, 0, 0);*/
+    cursor: pointer;
+    transition: .3s;
 }
-#primo {
+#primo, #parimpar, #fatorial, #quadrado, #bhaskara {
     height: 200px ;
     width: 100%;
     text-align: center;
     display: none;
+    font-family: 'Muli';
 }
 
-#input1 {
+#input1, #input2, #input3 {
     display: none;
     padding: 10px;
     margin: 0 auto;
@@ -64,17 +73,9 @@ body {
     position: relative;
     top: -8em;
 }
-#input2 {
-    display: none; 
-    padding: 10px;
-    margin: 0 auto;
-    border-radius: 10px;
-    outline: none;
-    position: relative;
-    top: -8em;
-}
+
 #resultButt {
-    width: 100%;
+    width: 190px;
     height: 40px;
     border-radius: 2em;
     border: 1px solid rgb(0, 0, 0);
@@ -83,9 +84,15 @@ body {
     top: 100px;
     position: relative;
     top: 75px;
+    transition: 0.5s;
+    color: white;
+    margin: 0 auto;
 }
 #resultButt:hover {
     background-image: linear-gradient(to right, rgb(241, 36, 190), rgb(88, 70, 255));
+    border: 5px solid white;
+    width: 210px;
+    cursor: pointer;
 }
 #result {
     background-color: white;
@@ -98,9 +105,11 @@ body {
     display: none;
     position: relative;
     top: 4.5em;
-    
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.452) inset;
 }
 #resultText {
-    margin-bottom: 0 auto;
-    margin-top: 0 auto;
+    font-weight: bold;
+    position: relative;
+    top: 40%;
 }
+
