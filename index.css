@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
 body {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     background-image: url(https://orig15.deviantart.net/2010/f/2015/144/c/2/c21d91dcb11ee16729ec892d03f7b855-d8un0f2.jpg);
 }
 #container {
@@ -10,16 +10,15 @@ body {
     border-radius: 20px;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.63), inset 0 0 6em rgba(0, 0, 0, 0.849);
     margin: 0 auto;
-    margin-top: 10em;
+    margin-top: 2.5%;
     color: white;
 }
 #container h1 {
     text-align: center;
-    padding: 50px 0 10px 0;
+    padding: 4% 0 10px 0;
     width: max-content;
     margin: 0 auto;
     transition: .2s;
-    
 }
 #container h1:hover {
     color: black;
@@ -29,9 +28,9 @@ body {
     cursor: pointer;
 }
 #menu {
-    height: 50% ;
+    height: 50%;
     text-align: center;
-    padding-top: 90px;
+    padding-top: 5%;
 }
 .botaoMenu {
     width: 110px;
@@ -41,6 +40,7 @@ body {
     font-weight: bold;
     font-size: large;
     background-color: rgb(255, 255, 255);
+    transition: .3s;
 }
 .botaoMenu:hover {
     background-color: rgb(49, 0, 65);
@@ -56,12 +56,12 @@ body {
     cursor: pointer;
     transition: .3s;
 }
-#primo, #parimpar, #fatorial, #quadrado, #bhaskara {
+#primo, #parimpar, #fatorial, #quadrado, #areacirculo, #bhaskara {
     height: 200px ;
     width: 100%;
     text-align: center;
     display: none;
-    font-family: 'Muli';
+    font-family: 'Varela Round';
 }
 
 #input1, #input2, #input3 {
@@ -71,6 +71,7 @@ body {
     border-radius: 10px;
     outline: none;
     position: relative;
+    width: 20%;
     top: -8em;
 }
 
@@ -112,4 +113,3 @@ body {
     position: relative;
     top: 40%;
 }
-

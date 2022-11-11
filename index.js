@@ -3,6 +3,7 @@ const parimpar = document.getElementById('parimpar')
 const fatorial = document.getElementById('fatorial')
 const quadrado = document.getElementById('quadrado')
 const bhaskara = document.getElementById('bhaskara')
+const areacirculo = document.getElementById('areacirculo')
 
 const menu = document.getElementById('menu')
 const titulo = document.getElementById('titulo')
@@ -19,10 +20,14 @@ titulo.onclick = () => {
     parimpar.style.display = 'none'
     fatorial.style.display = 'none'
     quadrado.style.display = 'none'
+    areacirculo.style.display = 'none'
     bhaskara.style.display = 'none'
     result.style.display = 'none'
     resultText.innerText = ''
-    resultText.style.position = 'relative'
+
+    input1.placeholder = ''
+    input2.placeholder = ''
+    input3.placeholder = ''
 
     menu.style.display = 'block'
 }
@@ -39,6 +44,7 @@ function visibilitar(tohide, toshow) {
     resultButt.style.display = 'block'
     toshow.appendChild(result)
     result.style.display = 'block'
+    resultText.innerText = ''
 }
 
 function primar() {
@@ -95,7 +101,7 @@ function fatorialar() {
      * @returns {number}
      */
     function factorial(num) {
-        if (num === 0) return 1
+        if (num == 0) return 1
         else return num * factorial(num - 1)
     }
 }
@@ -110,7 +116,6 @@ function quadradar() {
     resultButt.onclick = () => {
         let val = Number(input1.value), val2 = Number(input2.value)
         resultText.innerText = ''
-        
         resultText.style.position = 'static'
 
         if (val && val2) {
@@ -122,34 +127,55 @@ function quadradar() {
         }
     }
 }
+
 function bhaskarar() {
     visibilitar(menu, bhaskara)
     bhaskara.appendChild(input1)
     input1.style.display = 'inline-block'
-    input1.style.width = '20%'
+    input1.placeholder = 'a:'
     bhaskara.appendChild(input2)
     input2.style.display = 'inline-block'
-    input2.style.width = '20%'
+    input2.placeholder = 'b:'
     bhaskara.appendChild(input3)
     input3.style.display = 'inline-block'
-    input3.style.width = '20%'  
+    input3.placeholder = 'c:'
 
     resultButt.onclick = () => {
-        
         let a = Number(input1.value)
         let b = Number(input2.value)
         let c = Number(input3.value)
 
-        let delta = Number((b * b) - 4 * a * c)
+        let delta = (b * b) - (4 * a * c)
 
-        if (delta > 0) {
-            let x1 = Number((-b + Math.sqrt(delta)) / (a * 2))
-            let x2 = Number((-b - Math.sqrt(delta)) / (a * 2))
+        if (delta >= 0) {
+            let x1 = (-b + Math.sqrt(delta)) / (a * 2)
+            let x2 = (-b - Math.sqrt(delta)) / (a * 2)
 
-            resultText.innerText = `X1 = ${x1}  X2 = ${x2}`
-        }
-        else {
+            resultText.innerText = `x¹ = ${x1} | x² = ${x2}`
+        } else {
             resultText.innerText = `Delta é negativo, então a equação não possui raizes reais`
         }
     }
 }
+
+function areaCircular() {
+    visibilitar(menu, areacirculo)
+    areacirculo.appendChild(input1)
+    input1.style.display = 'block'
+    input1.placeholder = 'raio:'
+
+    resultButt.onclick = () => {
+        let raio = Number(input1.value)
+        if (raio > 0) {
+            let area = Math.PI * (raio * raio)
+
+            resultText.innerText = `A: ${area}`
+        } else {
+            resultText.innerText = `O raio deve ser positivo`
+        }
+    }
+}
+
+document.addEventListener('keydown', e => {
+    if (e.key == 'Enter') resultButt.click()
+})
