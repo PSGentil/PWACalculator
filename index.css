@@ -67,7 +67,7 @@ body {
     cursor: pointer;
     transition: .3s;
 }
-#primo, #parimpar, #fatorial, #quadrado, #areacirculo, #bhaskara {
+#primo, #parimpar, #fatorial, #quadrado, #areacirculo, #bhaskara, #hipotenusa, #vmedia {
     height: 200px ;
     width: 100%;
     text-align: center;
@@ -99,6 +99,7 @@ body {
     transition: 0.5s;
     color: white;
     margin: 0 auto;
+    font-weight: bold;
 }
 #resultButt:hover {
     background-image: linear-gradient(to right, rgb(241, 36, 190), rgb(88, 70, 255));

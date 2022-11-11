@@ -4,6 +4,8 @@ const fatorial = document.getElementById('fatorial')
 const quadrado = document.getElementById('quadrado')
 const bhaskara = document.getElementById('bhaskara')
 const areacirculo = document.getElementById('areacirculo')
+const hipotenusa = document.getElementById('hipotenusa')
+const vmedia = document.getElementById('vmedia')
 
 const menu = document.getElementById('menu')
 const titulo = document.getElementById('titulo')
@@ -22,6 +24,8 @@ titulo.onclick = () => {
     quadrado.style.display = 'none'
     areacirculo.style.display = 'none'
     bhaskara.style.display = 'none'
+    hipotenusa.style.display = 'none'
+    vmedia.style.display = 'none'
     result.style.display = 'none'
     resultText.innerText = ''
 
@@ -179,7 +183,41 @@ function areaCircular() {
         }
     }
 }
+function hipotenusar() {
+    visibilitar(menu, hipotenusa)
+    hipotenusa.appendChild(input1)
+    input1.style.display = 'inline-block'
+    input1.placeholder = 'cateto a:'
+    hipotenusa.appendChild(input2)
+    input2.style.display = 'inline-block'
+    input2.placeholder = 'cateto b:'
 
+    resultButt.onclick = () => {
+        if (input1.value && input2.value) {
+            resultText.innerText = `h = ${Math.sqrt((Number(input1.value) * Number(input1.value)) + (Number(input2.value * Number(input2.value))))}`
+        }
+        else {
+            resultText.innerText = 'Valor inválido!'
+        }
+    }
+
+}
+function vmediar() {
+    visibilitar(menu, vmedia) 
+    vmedia.appendChild(input1)
+    input1.style.display = 'inline-block'   
+    input1.placeholder = 'distância: '
+    vmedia.appendChild(input2)
+    input2.style.display = 'inline-block'   
+    input2.placeholder = 'tempo: '
+
+    resultButt.onclick = () => {
+        if (input1.value && input2.value) {
+            resultText.innerText = `Vm = ${Number(input1.value) / Number(input2.value)}`
+        }
+    }
+
+}
 document.addEventListener('keydown', e => {
     if (e.key == 'Enter') resultButt.click()
 })
