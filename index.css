@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 body {
     font-family: 'Varela Round', sans-serif;
-    /*background-image: url(https://orig15.deviantart.net/2010/f/2015/144/c/2/c21d91dcb11ee16729ec892d03f7b855-d8un0f2.jpg);*/
-    background-image: url(https://wallpaperaccess.com/full/5143161.jpg);
+    background-image: linear-gradient(to left, rgb(219, 17, 219), rgb(119, 13, 240));
     background-size: 100% 1080px;
     margin: 0;
     padding: 0;
