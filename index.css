@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 body {
     font-family: 'Varela Round', sans-serif;
-    background-image: url(https://orig15.deviantart.net/2010/f/2015/144/c/2/c21d91dcb11ee16729ec892d03f7b855-d8un0f2.jpg);
+    /*background-image: url(https://orig15.deviantart.net/2010/f/2015/144/c/2/c21d91dcb11ee16729ec892d03f7b855-d8un0f2.jpg);*/
+    background-image: url(https://wallpaperaccess.com/full/5143161.jpg);
+    background-size: 100% 1080px;
+    margin: 0;
+    padding: 0;
 }
 #container {
-    background-color: rgb(160, 8, 165);
+    background-image: linear-gradient(to right, rgb(219, 17, 219), rgb(119, 13, 240));
+    /*background-color: rgb(160, 8, 165);*/
     width: 40%;
     padding: 50px 20px;
     border-radius: 20px;
@@ -23,7 +28,7 @@ body {
 #container h1:hover {
     color: black;
     text-shadow: 0 0 1em 0 rgb(7, 88, 0);
-    font-size: 300%;
+    font-size: 250%;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -47,12 +52,18 @@ body {
     color: white;
     border: 5px solid rgb(255, 255, 255);
     box-shadow:
+    rgba(255, 0, 255, 0.4) -5px 5px,
+    rgba(255, 0, 221, 0.3) -10px 10px,
+    rgba(255, 0, 221, 0.2) -15px 15px,
+    rgba(255, 0, 221, 0.1) -20px 20px,
+    rgba(255, 0, 212, 0.05) -25px 25px;
+    /*box-shadow:
     rgba(240, 46, 170, 0.4) -5px 5px,
     rgba(240, 46, 170, 0.3) -10px 10px,
     rgba(240, 46, 170, 0.2) -15px 15px,
     rgba(240, 46, 170, 0.1) -20px 20px,
     rgba(240, 46, 170, 0.05) -25px 25px;
-    /*box-shadow: 0 0 2em rgb(0, 0, 0);*/
+    box-shadow: 0 0 2em rgb(0, 0, 0);*/
     cursor: pointer;
     transition: .3s;
 }
@@ -112,4 +123,32 @@ body {
     font-weight: bold;
     position: relative;
     top: 40%;
+}
+#credits {
+    background-color: white;
+    width: 12em;
+    padding: 20px;
+    border: 3px solid rgb(163, 0, 163);
+    border-radius: 2em;
+    opacity: 0;
+    transition: .7s;
+}
+#credits:hover {
+    opacity: 1;
+}
+#border {
+    border: 5px dashed rgba(255, 255, 255, 0.123);
+    width: max-content;
+    border-radius: 2.2em;
+    margin: 0 auto;
+    margin-top: 0.6em;
+}
+/*h3 {
+    position: absolute;
+    bottom: 0;
+    left: 4em;
+    color: rgba(255, 255, 255, 0.308);
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px dashed rgba(255, 255, 255, 0.274)
 }

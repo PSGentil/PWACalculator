@@ -146,14 +146,18 @@ function bhaskarar() {
         let c = Number(input3.value)
 
         let delta = (b * b) - (4 * a * c)
+        if (a) {
+            if (delta >= 0) {
+                let x1 = (-b + Math.sqrt(delta)) / (a * 2)
+                let x2 = (-b - Math.sqrt(delta)) / (a * 2)
 
-        if (delta >= 0) {
-            let x1 = (-b + Math.sqrt(delta)) / (a * 2)
-            let x2 = (-b - Math.sqrt(delta)) / (a * 2)
-
-            resultText.innerText = `x¹ = ${x1} | x² = ${x2}`
-        } else {
-            resultText.innerText = `Delta é negativo, então a equação não possui raizes reais`
+                resultText.innerText = `x¹ = ${x1} | x² = ${x2}`
+            } else {
+                resultText.innerText = `Delta é negativo, então a equação não possui raizes reais`
+            }
+        }
+        else {
+            resultText.innerText = 'Valor inválido!'
         }
     }
 }
