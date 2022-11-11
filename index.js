@@ -193,22 +193,24 @@ function hipotenusar() {
     input2.placeholder = 'cateto b:'
 
     resultButt.onclick = () => {
-        if (input1.value && input2.value) {
-            resultText.innerText = `h = ${Math.sqrt((Number(input1.value) * Number(input1.value)) + (Number(input2.value * Number(input2.value))))}`
+        let b = Number(input1.value)
+        let c = Number(input2.value)
+
+        if (b && c) {
+            resultText.innerText = `a = ${Math.sqrt((b * b) + (c * c))}`
         }
         else {
             resultText.innerText = 'Valor inválido!'
         }
     }
-
 }
 function vmediar() {
-    visibilitar(menu, vmedia) 
+    visibilitar(menu, vmedia)
     vmedia.appendChild(input1)
-    input1.style.display = 'inline-block'   
+    input1.style.display = 'inline-block'
     input1.placeholder = 'distância: '
     vmedia.appendChild(input2)
-    input2.style.display = 'inline-block'   
+    input2.style.display = 'inline-block'
     input2.placeholder = 'tempo: '
 
     resultButt.onclick = () => {
